@@ -24,11 +24,6 @@ const Navbar = ({ onRouteChange, connect, address, connected, wallet }) => {
                 Book a slot
               </a>
             </li>
-            <li>
-              <a className='no-underline text-gray-200' onClick={() => onRouteChange("inquiry")}>
-                Inquiry
-              </a>
-            </li>
           </ul>
 
           <div className="flex items-center">
