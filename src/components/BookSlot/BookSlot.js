@@ -23,7 +23,6 @@ const BookSlot = ({ slots, handleSlotSelection, isProcessing }) => {
     }
   };
 
-  // Function to handle slot selection
   const selectSlot = (slot) => {
     if (!isOccupied(slot)) {
       setSelectedSlot(slot);
@@ -40,14 +39,14 @@ const BookSlot = ({ slots, handleSlotSelection, isProcessing }) => {
           {allSlots.map((slot, index) => (
             <button
               key={index}
-              type="button" // Set button type to button to prevent form submission
+              type="button" 
               className={`w-16 h-16 text-center rounded-lg text-white ${
                 isOccupied(slot)
                   ? "bg-red-600 cursor-not-allowed"
                   : "bg-green-600 hover:bg-green-500"
               }`}
               disabled={isOccupied(slot)}
-              onClick={() => selectSlot(slot)} // Use selectSlot to handle selection
+              onClick={() => selectSlot(slot)}
             >
               {slot}
             </button>
