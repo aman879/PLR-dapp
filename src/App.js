@@ -160,7 +160,7 @@ const App = () => {
         const tx = await contract.setSlot(primary, Number(secondary))
         const res = await tx.wait()
         if(res.status) {
-          toast.success(`Slot no: ${primary,secondary}.`, {
+          toast.success(`Slot no: ${primary}-${secondary}.`, {
             position: "top-center"
           })
           await loadSlots();
